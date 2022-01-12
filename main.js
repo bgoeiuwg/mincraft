@@ -28,13 +28,13 @@ function player_update()
 function new_image(get_image)
 
 {
-    fabric.Image.fromURL("player.png", function(Img){
+    fabric.Image.fromURL(get_image, function(Img){
         block_image_object = Img;
-        block_image_object.scaleToWidth(150);
-        block_image_object.scaleToHeight(140);
+        block_image_object.scaleToWidth(block_image_width);
+        block_image_object.scaleToHeight(block_image_height);
         block_image_object.set({
-            top : player_y,
-            left : player_x
+            top : player_y+80,
+            left : player_x+50
         });
         canvas.add( block_image_object);
 
